@@ -148,3 +148,21 @@
     display: none;
     opacity: 0;
 }
+
+.load-more{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #4e75ff;
+    border: transparent;
+    color: #fff;
+    width: 91px;
+    height: 40px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    opacity: 0;
+    overflow: hidden;
+  }
