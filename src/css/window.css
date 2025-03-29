@@ -150,19 +150,21 @@
 }
 
 .load-more{
-    display: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    background: #4e75ff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    cursor: pointer;
+    display: block;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    border-radius: 8px;
-    background: #4e75ff;
-    border: transparent;
-    color: #fff;
-    width: 91px;
-    height: 40px;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    opacity: 0;
-    overflow: hidden;
+    margin: 20px auto;
   }
