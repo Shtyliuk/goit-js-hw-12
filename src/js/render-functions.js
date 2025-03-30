@@ -18,12 +18,24 @@ function galleryTemplate(element) {
         <img class="gallery-image" src="${webformatURL}" alt="${tags}" />
       </a>
       <ul class="gallery-body">
-        <li class="gallery-info"><h3>Likes:</h3><p>${likes}</p></li>
-        <li class="gallery-info"><h3>Views:</h3><p>${views}</p></li>
-        <li class="gallery-info"><h3>Comments:</h3><p>${comments}</p></li>
-        <li class="gallery-info"><h3>Downloads:</h3><p>${downloads}</p></li>
+        <li class="gallery-info">
+          <h3>Likes:</h3>
+          <p>${likes}</p>
+        </li>
+        <li class="gallery-info">
+          <h3>Views:</h3>
+          <p>${views}</p>
+        </li>
+        <li class="gallery-info">
+          <h3>Comments:</h3>
+          <p>${comments}</p>
+        </li>
+        <li class="gallery-info">
+          <h3>Downloads:</h3>
+          <p>${downloads}</p>
+        </li>
       </ul>
-    </li>`;
+    </li>`
 }
 
 export function clearGallery() {
