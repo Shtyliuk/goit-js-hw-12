@@ -4,10 +4,22 @@ import{a as u,S as m,i}from"./assets/vendor-BjRz3xa9.js";(function(){const t=doc
         <img class="gallery-image" src="${t}" alt="${c}" />
       </a>
       <ul class="gallery-body">
-        <li class="gallery-info"><h3>Likes:</h3><p>${e}</p></li>
-        <li class="gallery-info"><h3>Views:</h3><p>${a}</p></li>
-        <li class="gallery-info"><h3>Comments:</h3><p>${n}</p></li>
-        <li class="gallery-info"><h3>Downloads:</h3><p>${p}</p></li>
+        <li class="gallery-info">
+          <h3>Likes:</h3>
+          <p>${e}</p>
+        </li>
+        <li class="gallery-info">
+          <h3>Views:</h3>
+          <p>${a}</p>
+        </li>
+        <li class="gallery-info">
+          <h3>Comments:</h3>
+          <p>${n}</p>
+        </li>
+        <li class="gallery-info">
+          <h3>Downloads:</h3>
+          <p>${p}</p>
+        </li>
       </ul>
     </li>`}function L(){r.gallery.innerHTML=""}function g(o){const t=o.hits.map(b).join(`
 `);r.gallery.insertAdjacentHTML("beforeend",t),w.refresh()}let s=1,d="";r.loader.style.display="none";r.loadMoreBtn.style.display="none";r.form.addEventListener("submit",async o=>{if(o.preventDefault(),d=o.target.elements["search-text"].value.trim(),s=1,!d){i.show({message:"Search query cannot be empty!",messageColor:"white",backgroundColor:"orange",position:"topRight"});return}r.loader.style.display="flex",r.loadMoreBtn.style.display="none",L();try{const t=await y(d,s);t.hits.length===0?i.show({message:"No images found. Try again!",messageColor:"white",backgroundColor:"red",position:"topRight"}):(g(t),t.totalHits>s*15&&(r.loadMoreBtn.style.display="block"))}catch(t){i.show({message:t.message,messageColor:"white",backgroundColor:"red",position:"topRight"})}finally{r.loader.style.display="none"}o.target.reset()});r.loadMoreBtn.addEventListener("click",async()=>{s++,r.loader.style.display="flex",r.loadMoreBtn.style.display="none";try{const o=await y(d,s);g(o),o.totalHits>s*15?r.loadMoreBtn.style.display="block":i.show({message:"No more images to load.",messageColor:"white",backgroundColor:"blue",position:"topRight"})}catch(o){i.show({message:o.message,messageColor:"white",backgroundColor:"red",position:"topRight"})}finally{r.loader.style.display="none"}});
